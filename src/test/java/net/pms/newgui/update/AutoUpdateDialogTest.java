@@ -63,7 +63,7 @@ public class AutoUpdateDialogTest {
     public void dialogIsPlacedInsideParent() {
         when(parent.isShowing()).thenReturn(true);
         new AutoUpdateDialog(parent, autoUpdater);
-        verify(parent).getLocationOnScreen();
+        verify(parent, times(1)).getLocationOnScreen();
     }
 
 }
