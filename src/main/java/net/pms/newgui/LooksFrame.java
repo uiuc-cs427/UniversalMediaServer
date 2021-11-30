@@ -294,12 +294,6 @@ public class LooksFrame extends JFrame implements IFrame, Observer {
 		// Swing Settings
 		initializeLookAndFeel();
 
-		// wait till the look and feel has been initialized before (possibly) displaying the update notification dialog
-		if (autoUpdater != null) {
-			autoUpdater.addObserver(this);
-			autoUpdater.pollServer();
-		}
-
 		// Shared Fonts
 		final Integer twelve = Integer.valueOf(12);
 		final Integer fontPlain = Integer.valueOf(Font.PLAIN);
@@ -472,6 +466,13 @@ public class LooksFrame extends JFrame implements IFrame, Observer {
 		}
 
 		BasicSystemUtils.instance.addSystemTray(this);
+
+		// wait till the application has been initialized before (possibly) displaying the update notification dialog
+		// this ensures the dialog is initially shown on top of the main window
+		if (autoUpdater != null) {
+			autoUpdater.addObserver(this);
+			autoUpdater.pollServer();
+		}
 	}
 
 	public static ImageIcon readImageIcon(String filename) {

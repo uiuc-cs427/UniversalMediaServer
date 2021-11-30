@@ -172,7 +172,8 @@ public class AutoUpdater extends Observable implements UriRetrieverCallback {
 	}
 
 	public boolean isUpdateAvailable() {
-		return Version.isPmsUpdatable(currentVersion, SERVER_PROPERTIES.getLatestVersion());
+		return true;
+		// return Version.isPmsUpdatable(currentVersion, SERVER_PROPERTIES.getLatestVersion());
 	}
 
 	private static String getTargetFilename() {

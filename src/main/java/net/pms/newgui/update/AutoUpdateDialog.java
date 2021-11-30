@@ -46,7 +46,7 @@ public class AutoUpdateDialog extends JDialog implements Observer {
 	}
 
 	AutoUpdateDialog(Window parent, AutoUpdater autoUpdater) {
-		super(parent, Messages.getString("AutoUpdate.0"));
+		super((Dialog) null, Messages.getString("AutoUpdate.0"));
 		this.autoUpdater = autoUpdater;
 		autoUpdater.addObserver(this);
 		initComponents();
