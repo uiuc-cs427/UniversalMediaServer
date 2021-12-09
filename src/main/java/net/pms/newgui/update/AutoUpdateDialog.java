@@ -45,7 +45,12 @@ public class AutoUpdateDialog extends JDialog implements Observer {
 		}
 	}
 
-	// CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
+	/**
+	 * Constructs an auto update dialog.
+	 * @param parent Parent window to place the dialog inside.
+	 * @param autoUpdater Auto updater object.
+	 * CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
+	 */
 	AutoUpdateDialog(Window parent, AutoUpdater autoUpdater) {
 		// CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
 		super((Dialog) null, Messages.getString("AutoUpdate.0"));
