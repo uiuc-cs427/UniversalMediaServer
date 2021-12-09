@@ -40,6 +40,7 @@ public class AutoUpdateDialogTest {
 
     /**
      * Test that the dialog is modeless (i.e. does not take precedence over other windows).
+     * CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
      */
     @Test
     public void dialogIsModeless() {
@@ -49,6 +50,7 @@ public class AutoUpdateDialogTest {
 
     /**
      * Test that the dialog has no parent window.
+     * CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
      */
     @Test
     public void dialogHasNoParent() {
@@ -58,6 +60,7 @@ public class AutoUpdateDialogTest {
 
     /**
      * Test that despite the dialog having no parent window, it is still initially placed "inside" the parent.
+     * CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
      */
     @Test
     public void dialogIsPlacedInsideParent() {

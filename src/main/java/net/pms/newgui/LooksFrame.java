@@ -265,6 +265,7 @@ public class LooksFrame extends JFrame implements IFrame, Observer {
 	 * Constructs a <code>DemoFrame</code>, configures the UI,
 	 * and builds the content.
 	 */
+	// CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
 	public LooksFrame(AutoUpdater autoUpdater, @Nonnull PmsConfiguration configuration, @Nonnull WindowPropertiesConfiguration windowConfiguration) {
 		super(windowConfiguration.getGraphicsConfiguration());
 		if (configuration == null) {
@@ -467,6 +468,7 @@ public class LooksFrame extends JFrame implements IFrame, Observer {
 
 		BasicSystemUtils.instance.addSystemTray(this);
 
+		// CS427 Issue link: https://github.com/UniversalMediaServer/UniversalMediaServer/issues/2603
 		// wait till the application has been initialized before (possibly) displaying the update notification dialog
 		// this ensures the dialog is initially shown on top of the main window
 		if (autoUpdater != null) {
